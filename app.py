@@ -122,31 +122,31 @@ def create_excel(dataframe: pd.DataFrame) -> None:
     ultrarare = workbook.add_format({'bg_color':   '#b5ffd8',
                                     'font_color': '#000000'})
 
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Normal"',
                                   'format':    normal})
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Rare"',
                                   'format':    rare})
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Elite"',
                                   'format':    elite})
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Priority"',
                                   'format':    superrare})
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Super Rare"',
                                   'format':    superrare})
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Ultra Rare"',
                                   'format':    ultrarare})
-    worksheet.conditional_format(0, 0, max_row, max_col,
+    worksheet.conditional_format(0, 0, max_row, 2,
                                  {'type':     'formula',
                                   'criteria': '=$C1="Decisive"',
                                   'format':    ultrarare})
