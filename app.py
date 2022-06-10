@@ -96,7 +96,7 @@ def create_excel(dataframe: pd.DataFrame) -> None:
 
     # Replaces all Collab "nations" with a common descriptor
     nations = ['Royal Navy', 'Eagle Union', 'Sakura Empire', 'Iron Blood', 'Dragon Empery',
-               'Norther Parliament', 'Iris Libre', 'Vichya Dominion', 'Sardegna Empire', 'META', 'Universal']
+               'Northern Parliament', 'Iris Libre', 'Vichya Dominion', 'Sardegna Empire', 'META', 'Universal']
     dataframe.loc[~dataframe["Nation"].isin(nations), "Nation"] = "Collab"
 
     writer = pd.ExcelWriter('ships.xlsx', engine='xlsxwriter')
